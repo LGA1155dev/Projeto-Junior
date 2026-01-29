@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Projeto nível júnior</title>
+  <script src="https://kit.fontawesome.com/170c208023.js" crossorigin="anonymous"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    
+
+    header{
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      height: 600px;
+      gap: 10px;
+      justify-content: flex-start;
+      align-items: center;
+      background-image: url('images/mobile/image-header.jpg');
+      background-position: bottom;
+      background-size: cover;
+
+      & #Btn{
+          padding: 10px;
+          border: 0px;
+          cursor: pointer;
+          background-color: #ffffff00;
+          font-size: 2.5rem;
+        }
+
+        & .logo{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          & #Image-Logo{
+            cursor: pointer;
+            width: 300px;
+          }
+        }
+
+        & .Contact{
+          display: flex;
+          flex-direction: row nowrap;
+          align-items: center;
+          justify-content: flex-end;
+          width: 200px;
+          height: 50px;
+        }
+
+      & .Contact a{
+        font-weight: 600;
+        font-size: 1.1em;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 1.5em;
+        text-decoration: none;
+        color:  black;
+        background-color: #e5e902f3;
+        border-radius: 20px;
+
+
+        &:hover{
+          background-color: #fbff0bbb;
+        }
+      }
+
+      & aside{
+        position: relative;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        height: 270px;
+        width: 85%;
+        align-items: flex-end;
+        justify-content: space-around;
+
+        &::before{
+          content: "";
+          position: absolute;
+          top: -20px;
+          right: 0;
+          width: 0;
+          border-left: 20px solid transparent;
+          border-bottom:  20px solid white;
+        }
+
+
+        & .itemsMenu{
+          color: black;
+          text-decoration: none;
+          height: 40px;
+          display: flex;
+          font-size: 1.3em;
+          font-family: "Poppins";
+
+          &:hover{
+            border-bottom: 2px solid black;
+          }
+        }
+      }
+
+      & h1{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 5rem;
+        font-weight: 600;
+        text-shadow: 1px 2px 9px #333333;
+        font-family: "Arial";
+        height: 200px;
+        width: 100%;
+      }
+
+      
+
+
+    }
+
+    .principal-Grids{
+      display: grid;
+    }
+
+    .Grid-egg{
+      background-image: url('images/mobile/image-transform.jpg');
+      width: 100%;
+      height: 750px;
+      background-position: center;
+      background-size: cover;
+      
+    }
+
+    .Grid-1{
+      margin-top: 100px;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+
+      & h1{
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      & p{
+        width: 85%;
+        font-family: "Poppins";
+        margin-top: 30px;
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+
+      & span{
+        margin-top: 50px;
+        font-size: 1.5em;
+        cursor: pointer;
+        text-underline-offset: 3px;
+        text-decoration-line: overline underline;
+        text-decoration-color: hwb(84 26% 47%);
+      }
+    }
+
+    .Grid-Cup{
+      height: 500px;
+      width: 100%;
+
+      background-image: url('images/mobile/image-stand-out.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    .Grid-2{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & h1{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+        font-size: 2.5rem;
+      }
+
+      & p{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 85%;
+        font-family: "Poppins";
+        text-align: center;
+        font-size: 1.2em;
+      }
+
+      & span{
+        text-decoration-line: overline underline;
+        text-decoration-color: #e66a89;
+        cursor: pointer;
+        font-size: 1.5em;
+        padding-bottom: 30px;
+      }
+    }
+
+    .Grid-Cherry{
+      background-image: url('images/mobile/image-graphic-design.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      height: 700px;
+
+      & h1{
+        color: #323a32;
+        font-size: 2.5rem;
+      }
+
+      & p{
+        color: #45644e;
+        font-weight: 600;
+        font-size: 1.2em;
+        font-family: "Poppins";
+        width: 85%;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .Grid-Orange{
+      background-image: url('images/mobile/image-photography.jpg');
+      background-position: top;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: 750px;
+
+      & h1{
+        color: #1e3d52;
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+      }
+
+      & p{
+        color: #173447d5;
+        font-weight: 600;
+        width: 85%;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: "Poppins";
+      }
+    }
+
+    .first-testimonials{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+
+      & #Imagem-Emily{
+        width: 80px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 50%;
+      }
+
+      & #Score-Emily{
+        cursor: pointer;
+        width: 150px;
+        margin-bottom: 30px;
+      }
+
+      & p{
+        font-family: "Poppins";
+        width: 75%;
+        text-align: center;
+
+
+        & span{
+          font-weight: 600;
+          font-size: 1.3em;
+        }
+      }
+
+      & .Gray-Emily{
+        color: #929292;
+      }
+    }
+
+    .second-testimonials{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+
+      & #Imagem-Thomas{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 80px;
+        border-radius: 50%;
+
+
+      }
+
+      & #Score-Thomas{
+        cursor: pointer;
+        margin-bottom: 30px;
+        width: 150px;
+      }
+
+      & p{
+        font-family: "Poppins";
+        width: 75%;
+        text-align: center;
+
+        & span{
+          font-weight: 600;
+          font-size: 1.3em;
+        }
+        
+      }
+
+      & .Gray-Thomas{
+        color: #929292;
+      }
+
+
+    }
+    
+
+    .third-testimonials{
+      margin-bottom: 50px;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & #Imagem-Jennie{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 50%;
+        width: 80px;
+      }
+
+      & #Score-Jennie{
+        width: 150px;
+        margin-bottom: 30px;
+      }
+
+      & p{
+        width: 75%;
+        text-align: center;
+        font-family: "Poppins";
+
+        & span{
+          font-weight: 600;
+          font-size: 1.3em;
+        }
+
+        
+      }
+
+      & .Gray-Jennie{
+        color: #929292;
+      }
+    }
+
+    .Grid-Images{
+      background-color: #90b890b9;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      
+      & #Milk{
+        width: 200px;
+        background-size: cover;
+      }
+    
+
+      & #Orange{
+        width: 200px;
+      }
+
+      & #cone{
+        width: 200px;
+      }
+
+      & #cubes{
+        width: 200px;
+      }
+      
+    }
+
+    footer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #45bd6b85;
+      height: 400px;
+
+      & h1{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 3rem;
+        font-family: "Poppins";
+        text-shadow: 5px 1px 5px #5d795d;
+        color: #417441de;
+        font-weight: bolder;
+      }
+
+      & aside{
+        width: 50%;
+        height: 40px;
+        gap: 30px;
+        display: flex;
+        justify-content: space-around;
+
+      }
+
+      & a{
+        font-weight: 500;
+        color: #426942;
+        font-size: 1.4em;
+        font-family: "Poppins";
+        text-decoration: none;
+
+        &:hover{
+          border-bottom: 2px solid #567256;
+        }
+      }
+
+      & .icons{
+        margin-top: 80px;
+        display: flex;
+        gap: 30px;
+
+        & img{
+          cursor: pointer;
+          width: 30px;
+        }
+      }
+    }
+
+
+    @media screen and (min-width: 1024px) {
+      header{
+        align-items: flex-end;
+        background-image: url('images/desktop/image-header.jpg');
+
+        & aside{
+          margin: 30px;
+          width: 45%;
+        }
+      }
+
+      
+      .principal-Grids{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .Grid-1{
+        grid-area: 1 / 1 / 2 / 2;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .Grid-egg{
+        height: 750px;
+      }
+
+      .Grid-Cup{
+        height: 750px;
+      }
+
+      .Grid-Cherry{
+        height: 750px;
+      }
+
+      .Grid-Orange{
+        height: 750px;
+      }
+
+      .testimonials{
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+        
+      }
+
+      .Grid-Images{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-flow: row;
+
+        & #Milk{
+          width: 250px;
+        }
+
+        & #Orange{
+          width: 250px;
+        }
+
+        & #cone{
+          width: 250px;
+        }
+
+        & #cubes{
+          width: 250px;
+        }
+      }
+      
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+<section class="logo">
+
+<img src="images/logo.svg" alt="" id="Image-Logo">
+
+<button id="Btn"><i class="fa-solid fa-bars"></i></button>
+ 
+
+</section>
+
+    <aside class="menuBar">
+
+    <a href="#" class="itemsMenu">About</a>
+    <a href="#" class="itemsMenu">Services</a>
+    <a href="#" class="itemsMenu">Projects</a>
+    <span class="Contact"><a href="#">Contact</a></span>
+    
+    </aside>
+
+  </header>
+
+
+  <main class="principal-Grids">
+    
+<section class="Grid-egg">
+
+</section>
+
+<section class="Grid-1">
+      <h1>Transform your brand</h1>
+      
+      
+        <p>
+      We are a full-service creative agency specializing in helping brands grow fast.
+      Engage your clients through compelling visuals that do most of the marketing for you.
+        </p>
+
+        <span>LEARN MORE</span>
+
+    </section>
+
+
+
+<section class="Grid-Cup">
+
+
+</section>
+
+
+
+<section class="Grid-2">
+    <h1>Stand out to the right audience</h1>
+
+    <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+
+    <span>LEARN MORE</span>
+</section>
+
+
+
+<section class="Grid-Cherry">
+    <h1>Graphic design</h1>
+
+    <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+    </p>
+</section>
+
+
+
+<section class="Grid-Orange">
+  <h1>Photography</h1>
+
+  <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+</section>
+
+  </main>
+
+
+<section class="testimonials">
+  
+    <section class="first-testimonials">
+      <img src="images/image-emily.jpg" alt="" id="Imagem-Emily">
+  
+      <img src="images/mobile/5estrelas-2.png" alt="" id="Score-Emily">
+  
+      <p>
+        We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit. <br> <br>
+        <span>Emily R. </span><br> <br>
+        <p class="Gray-Emily">Marketing Director</p>
+      </p>
+    </section>
+  
+  
+    <img src="" alt="">
+  
+  
+  <section class="second-testimonials">
+  
+    <img src="images/image-thomas.jpg" alt="" id="Imagem-Thomas">
+  
+    <img src="images/mobile/5estrelas-2.png" alt="" id="Score-Thomas">
+  
+      <p>
+        Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+  
+      <br> <br><span>Thomas S.</span> <br> <br>
+        <p class="Gray-Thomas">Chief Operating Officer</p>
+      </p>
+  </section>
+  
+  
+  
+  
+    <section class="third-testimonials">
+  
+      <img src="" alt="">
+  
+      <img src="images/image-jennie.jpg" alt="" id="Imagem-Jennie">
+  
+      <img src="images/mobile/5estrelas-2.png" alt="" id="Score-Jennie">
+  
+      <p>
+        Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+       <br> <br> <span>Jennie F.</span> <br> <br>
+        <p class="Gray-Jennie">Business Owner</p>
+      </p>
+    </section>
+</section>
+  
+  
+    <section class="Grid-Images">
+      <img src="images/mobile/image-gallery-milkbottles.jpg" alt="" id="Milk">
+  
+      <img src="images/mobile/image-gallery-orange.jpg" alt="" id="Orange">
+  
+      <img src="images/mobile/image-gallery-cone.jpg" alt="" id="cone">
+  
+      <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="" id="cubes">
+    </section>
+
+
+<footer>
+
+  <h1>LGA1155dev</h1>
+  
+  <aside>
+
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="https://github.com/LGA1155dev/login" target="_blank">Projects</a>
+  </aside>
+
+  <section class="icons">
+    <img src="images/icon-facebook.svg" alt="">
+    <img src="images/icon-instagram.svg" alt="">
+    <img src="images/icon-twitter.svg" alt="">
+    <img src="images/icon-pinterest.svg" alt="">
+  </section>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
